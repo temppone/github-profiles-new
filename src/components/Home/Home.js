@@ -3,8 +3,11 @@ import Input from "../Input/Input";
 import imgIntro from "./img/imgIntro.svg";
 import { ButtonIntro, HomeContainer, ImgIntro } from "./Home.styled";
 
+console.log()
 const Home = () => {
   const [searchInputUser, setSearchInputUser] = React.useState();
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

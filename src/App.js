@@ -2,11 +2,11 @@ import "./App.css";
 import React from "react";
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ModesContext } from "./Repositories/providers/modes";
+import { ModesContext } from "./components/providers/modes";
 
-const Home = lazy(() => import("./Home"));
-const ProfileResult = lazy(() => import("./ProfileResult"));
-const NotFound = lazy(() => import("./NotFound"));
+const Home = lazy(() => import("./components/Home"));
+const ProfileResult = lazy(() => import("./components/ProfileResult"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 function App() {
   

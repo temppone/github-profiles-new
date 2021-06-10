@@ -3,10 +3,10 @@ import React from "react";
 export const ModesContext = React.createContext({});
 
 export const ModesProvider = (props) => {
-  const [mode, setMode] = React.useState(false);
+  const [modes, setModes] = React.useState(false);
 
   return (
-    <ModesContext.Provider value={{ mode, setMode }}>
+    <ModesContext.Provider value={{ modes, setModes }}>
       {props.children}
     </ModesContext.Provider>
   );
