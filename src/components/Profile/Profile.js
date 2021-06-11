@@ -14,7 +14,7 @@ const Profile = () => {
       <ProfilePicture
         src={"https://avatars.githubusercontent.com/u/11913605?v=4"}
       />
-      <ProfileUsername>Gustavo Temppone</ProfileUsername>
+      <ProfileUsername>Gustavo Tempone</ProfileUsername>
       <ProfileInfos>
         <p>Temppone</p>
         <p>Juiz de Fora - MG</p>

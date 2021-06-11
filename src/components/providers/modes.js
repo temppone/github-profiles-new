@@ -1,13 +1,13 @@
-import React from "react";
+// import React from "react";
 
-export const ModesContext = React.createContext({});
+// export const ModesContext = React.createContext({});
 
-export const ModesProvider = (props) => {
-  const [modes, setModes] = React.useState(false);
+// export const ModesProvider = (props) => {
+//   const [modes, setModes] = React.useState({});
 
-  return (
-    <ModesContext.Provider value={{ modes, setModes }}>
-      {props.children}
-    </ModesContext.Provider>
-  );
-};
+//   return (
+//     <ModesContext.Provider value={{ modes, setModes }}>
+//       {props}
+//     </ModesContext.Provider>
+//   );
+// };

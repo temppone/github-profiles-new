@@ -23,10 +23,20 @@ export const ProfilePicture = styled.img`
 
 export const ProfileUsername = styled.h2``;
 
-export const ProfileInfos = styled.div``;
+export const ProfileInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-export const ProfileContact = styled.div``;
+export const ProfileContact = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const ProfileLink = styled.a`
   display: block;
+  
+
 `;
