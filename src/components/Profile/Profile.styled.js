@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-  border: 1px solid #333333;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+
+  ::after {
+    content: "";
+    display: block;
+    background: #333;
+    height: 5px;
+    width: 70%;
+    margin: 2rem 0 2rem 0;
+  }
 `;
 
 export const ProfilePicture = styled.img`
@@ -18,3 +26,7 @@ export const ProfileUsername = styled.h2``;
 export const ProfileInfos = styled.div``;
 
 export const ProfileContact = styled.div``;
+
+export const ProfileLink = styled.a`
+  display: block;
+`;

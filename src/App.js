@@ -9,8 +9,10 @@ const ProfileResult = lazy(() => import("./components/ProfileResult"));
 const NotFound = lazy(() => import("./components/NotFound"));
 
 function App() {
-  
+  const { modes, setModes } = React.useContext(ModesContext);
 
+  setModes('teste');
+  console.log(modes);
   return (
     <Router>
       <div className="App">

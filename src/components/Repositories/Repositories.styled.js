@@ -7,7 +7,8 @@ export const RepositoriesContainer = styled.div`
 
 export const RepositoriesTitle = styled.h1`
   font-weight: bold;
-  padding: 0 1.2rem 0.5rem 1.2rem ;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 `;
 
 export const Repository = styled.div`
