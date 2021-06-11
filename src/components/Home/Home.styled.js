@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  margin-top: 5rem;
+margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

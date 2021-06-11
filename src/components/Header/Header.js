@@ -1,12 +1,14 @@
 import React from "react";
-import CheckboxToggle from "../CheckboxToggle/";
-import { HeaderContainer, HeaderPage } from "./Header.styled";
+import CheckboxSwitch from "../CheckboxSwitch/";
+import { HeaderLogo, HeaderContainer, HeaderPage } from "./Header.styled";
+import headerLogoImg from "./img/headerLogo.svg";
 
 const Header = () => {
   return (
     <HeaderPage>
       <HeaderContainer>
-        <CheckboxToggle />
+        <HeaderLogo src={headerLogoImg} />
+        <CheckboxSwitch />
       </HeaderContainer>
     </HeaderPage>
   );
