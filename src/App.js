@@ -3,6 +3,7 @@ import React from "react";
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GlobalStyle } from "./global";
+import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./components/Home"));
 const ProfileResult = lazy(() => import("./components/ProfileResult"));
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <GlobalStyle />
         <Header />
         <Switch>
