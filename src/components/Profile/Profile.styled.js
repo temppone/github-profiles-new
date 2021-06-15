@@ -5,6 +5,7 @@ export const ProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin: 0 auto;
 
   ::after {
     content: "";
@@ -21,7 +22,26 @@ export const ProfilePicture = styled.img`
   width: 50%;
 `;
 
-export const ProfileUsername = styled.h2``;
+export const ProfileUsername = styled.h2`
+  font-size: 1.4rem;
+  margin-bottom: 0;
+`;
+
+export const ProfileSocial = styled.div`
+  font-size: 1rem;
+`;
+
+export const ProfileSocialItem = styled.p`
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+
+  span {
+    font-weight: bold;
+    margin-right: 0.1rem;
+    margin-left: 0.4rem;
+  }
+`;
 
 export const ProfileInfos = styled.div`
   display: flex;
@@ -37,6 +57,4 @@ export const ProfileContact = styled.div`
 
 export const ProfileLink = styled.a`
   display: block;
-  
-
 `;

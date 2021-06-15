@@ -6,6 +6,8 @@ import {
   ProfilePicture,
   ProfileUsername,
   ProfileLink,
+  ProfileSocial,
+  ProfileSocialItem,
 } from "./Profile.styled";
 
 const Profile = () => {
@@ -15,7 +17,7 @@ const Profile = () => {
 
   React.useEffect(() => {
     async function getData(urlApi) {
-      const token = process.env.REACT_APP_GITHUB_API;
+      const token = process.env.REACT_APP_HOST_API_KEY;
 
       const dataReponse = await fetch(urlApi, {
         headers: {
@@ -33,24 +35,37 @@ const Profile = () => {
         .finally((response) => setLoading(false));
     }
 
-    console.log(data);
-
-    getData("https://api.github.com/user/temppone");
+    getData("https://api.github.com/users/temppone");
   }, []);
+
 
   return (
     <ProfileContainer>
-      <ProfilePicture
-        src={"https://avatars.githubusercontent.com/u/11913605?v=4"}
-      />
-      <ProfileUsername>Gustavo Tempone</ProfileUsername>
+      <ProfilePicture src={data.avatar_url} />
+      <ProfileUsername>{data.name}</ProfileUsername>
       <ProfileInfos>
-        <p>Temppone</p>
-        <p>Juiz de Fora - MG</p>
+        <p>{data.login}</p>
+        <ProfileSocial>
+          <ProfileSocialItem>
+            <span>{data.followers}</span>
+            Followers
+            <span>{data.following}</span>
+            Following
+          </ProfileSocialItem>
+          <ProfileSocialItem>
+            <span>{data.followers}</span>
+            Stars
+          </ProfileSocialItem>
+        </ProfileSocial>
+        <p>{data.location}</p>
       </ProfileInfos>
       <ProfileContact>
-        <ProfileLink href="">gtvtempone@gmail.com</ProfileLink>
-        <ProfileLink href="">https://sitegustavotempone.com.com</ProfileLink>
+        <ProfileLink target="_blank" href={data.email}>
+          {data.email}
+        </ProfileLink>
+        <ProfileLink target="_blank" href={data.blog}>
+          {data.blog}
+        </ProfileLink>
       </ProfileContact>
     </ProfileContainer>
   );

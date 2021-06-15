@@ -10,11 +10,8 @@ const ProfileResult = lazy(() => import("./components/ProfileResult"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const Header = lazy(() => import("./components/Header"));
 
-function App() {
-  // const { modes, setModes } = React.useContext(ModesContext);
-  // setModes("teste");
-  // console.log(modes);
 
+function App() {
   return (
     <Router>
       <Suspense fallback={<Loading />}>
